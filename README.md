@@ -5,7 +5,23 @@ Straightforward data-flow analysis in C++.
 ```
 ./autogen && ./configure && make
 ```
-
+## src/* 文件概述
+- Base.*  
+基础函数,类型转换
+- Constants.hxx  
+一些常量
+- dflow.cxx  
+主函数，解析，绘制
+- DFlowException.*  
+异常定义实现
+- Painter.*  
+语法树绘制ast/cfg/dast，生成的.dot文件通过dot命令生成图片
+- Program.*  
+Statement，Block，Expression，Identifier整个行为定义
+- SourceParser.yy  
+Yacc文件
+- SourceScanner.ll  
+Lex文件
 ## Example Usage and Output
 ```
 $ ./src/dflow ./tests/if-reach-00
