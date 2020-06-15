@@ -86,10 +86,3 @@ skip
 * [ANSI C Yacc grammar](http://www.lysator.liu.se/c/ANSI-C-grammar-y.html#expression)
 * [Semantic Analysis Phases of Compilation](http://www.cs.sunysb.edu/~cse304/Fall08/Lectures/ast-handout.pdf)
 * [Classical Dataflow Optimizations](http://www.cs.cmu.edu/afs/cs/academic/class/15745-s06/web/handouts/04.pdf)
-
-
-sudo apt install -y g++
-sudo apt install -y cmake
-sudo apt install -y make
-sudo apt install -y gdb
-sudo apt install -y graphviz-dev
