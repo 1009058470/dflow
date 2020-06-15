@@ -52,7 +52,7 @@ if test "x$IYACC" = "x"; then
     AC_MSG_ERROR([** bison/yacc is required but not found **])
 fi
 
-AC_PROG_LIBTOOL
+m4_pattern_allow.
 
 # checks for libraries.
 dnl AC_CHECK_LIB([gvc], [gvContext], [],

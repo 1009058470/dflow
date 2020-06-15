@@ -18,7 +18,7 @@
 %defines "SourceParser.hh"
 
 %error-verbose
-
+/*声明定义段*/
 %{
 
 #include "Program.hxx"
@@ -139,7 +139,7 @@ logicbinop : EQ | LT | LTE | GT | GTE | OR | AND
            ;
 
 %%
-
+/*定义辅助函数*/
 /* ////////////////////////////////////////////////////////////////////////// */
 /* wrapper for yyparse */
 int

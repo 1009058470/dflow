@@ -22,6 +22,7 @@
 /* uncomment for tons of flex output */
 /* %option debug */
 
+/*定义段*/
 %{
 
 #include <iostream>
@@ -30,7 +31,9 @@
 
 #include "Program.hxx"
 #include "SourceParser.hh"
-
+// yylval.str
+// yytext 当前识别的词法单元（词文）的指针
+// yyleng 当前识别的词法单元（词文）的长度
 #define SAVE_STOKEN                                                            \
 do {                                                                           \
     yylval.str = new std::string(yytext, yyleng);                              \
@@ -39,9 +42,8 @@ do {                                                                           \
 int lineNo = 1;
 
 %}
-
+/*词法规则段*/
 %%
-
 [\n] { ++lineNo; }
 
 [ \t] { ; }
@@ -107,3 +109,8 @@ int lineNo = 1;
   }
 
 %%
+/*辅助函数段*/
+// .匹配任意字符，除了 \n。
+/*
+yyterminate()  终止扫描
+*/

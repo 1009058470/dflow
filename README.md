@@ -22,6 +22,18 @@ Statement，Block，Expression，Identifier整个行为定义
 Yacc文件
 - SourceScanner.ll  
 Lex文件
+
+### sh 
+```shell script
+flex -d SourceScanner.ll
+yacc -d SoureceParser.yy
+```
+read png
+```shell script
+dot -Tpng -o ast.png if-reach-00-ast.dot
+dot -Tpng -o dast.png if-reach-00-dast.dot
+dot -Tpng -o cfg.png if-reach-00-cfg.dot
+```
 ## Example Usage and Output
 ```
 $ ./src/dflow ./tests/if-reach-00
@@ -74,3 +86,10 @@ skip
 * [ANSI C Yacc grammar](http://www.lysator.liu.se/c/ANSI-C-grammar-y.html#expression)
 * [Semantic Analysis Phases of Compilation](http://www.cs.sunysb.edu/~cse304/Fall08/Lectures/ast-handout.pdf)
 * [Classical Dataflow Optimizations](http://www.cs.cmu.edu/afs/cs/academic/class/15745-s06/web/handouts/04.pdf)
+
+
+sudo apt install -y g++
+sudo apt install -y cmake
+sudo apt install -y make
+sudo apt install -y gdb
+sudo apt install -y graphviz-dev
